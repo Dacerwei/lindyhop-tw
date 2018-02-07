@@ -18,6 +18,30 @@ const Routes = () => (
                 <About />
             </div>
         )} />
+        <Route path="/portfolio" component={() => (
+            <div>
+                <Nav />
+                <h1>about page</h1>
+            </div>
+        )} />
+        <Route path="/class" component={() => (
+            <div>
+                <Nav />
+                <h1>class page</h1>
+            </div>
+        )} />
+        <Route path="/coop" component={() => (
+            <div>
+                <Nav />
+                <h1>coop page</h1>
+            </div>
+        )} />
+        <Route path="/events" component={() => (
+            <div>
+                <Nav />
+                <h1>events page</h1>
+            </div>
+        )} />
     </Switch>
 )
 
