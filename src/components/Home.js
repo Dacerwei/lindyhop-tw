@@ -20,7 +20,7 @@ export default class Home extends Component {
     render() {
         return (
             <div>
-                <Segment vertical>main banner</Segment>
+                <Segment vertical>We're Naughty, so we Swing</Segment>
                 <Segment vertical>
                     <h2>Introduction | 舞團介紹</h2>
                     <p>Naughty Swing 搖擺舞團，於 2015 年成立，由6位平均舞齡 10 年、擁有不同街舞背景的舞者所組成。擅長將不同元素融合至 Swing Dance 當中，呈現有別於以往的演出，為目前台灣新生代指標性 Swing 舞團。2016 年發起 I Charleston Taipei 影片拍攝計畫，在 2 周內突破 50 萬人次點閱率，並獲得 10 多家媒體報導，包涵今日台灣、蘋果日報以及TVBS。</p>
@@ -33,7 +33,7 @@ export default class Home extends Component {
                     <Card.Group itemsPerRow={3}>
                         {
                             _.map(COOP_CONTENTS, (content, index) => (
-                                <Card>
+                                <Card key={content.id}>
                                     <Image src={coopIcons[content.id]} />
                                     <Card.Content>
                                         <Card.Header>{content.title}</Card.Header>
@@ -49,20 +49,14 @@ export default class Home extends Component {
                     <h2>Portfolio | 作品集</h2>
                     <Grid textAlign='center'>
                         {
-                            _.map([0, 1, 2, 3], (column) => {
+                            _.map([0, 1, 2], (column) => {
                                 return (
-                                    <Grid.Column mobile={16} tablet={8} computer={4}>
+                                    <Grid.Column key={`portfolioColumn-${column}`} mobile={16} tablet={8} computer={5} textAlign='center'>
                                         {
-                                            _.map(_.filter(PORTFOLIO_CONTENTS, (content, index) => (index % 4 === column)), (content) => (
+                                            _.map(_.filter(PORTFOLIO_CONTENTS, (content, index) => (index % 3 === column)), (content) => (
                                                 <Container key={content.ID}>
-                                                    <Reveal animated='move'>
-                                                        <Reveal.Content visible>
-                                                            <Image src={content.src} size='large' />
-                                                        </Reveal.Content>
-                                                        <Reveal.Content hidden>
-                                                            <p>{content.title}</p>
-                                                        </Reveal.Content>
-                                                    </Reveal>
+                                                    <Image src={content.src} size='huge' />
+                                                    <p>{content.title}</p>
                                                 </Container>
                                             ))
                                         }
@@ -82,7 +76,7 @@ export default class Home extends Component {
                         }
                     </Grid>
                 </Segment>
-            </div >
+            </div>
         )
     }
 }

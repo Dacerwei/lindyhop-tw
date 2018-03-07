@@ -5,7 +5,7 @@ import { Menu } from 'semantic-ui-react'
 export default class Nav extends Component {
     render() {
         return (
-            <Menu size="large" secondary borderless>
+            <Menu size="large" secondary borderless fluid>
                 <Menu.Item><Link to="/">HOME</Link></Menu.Item>
                 <Menu.Menu position="right" >
                     <Menu.Item><Link to="/about">ABOUT</Link></Menu.Item>
