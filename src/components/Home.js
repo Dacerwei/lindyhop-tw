@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Segment, Grid, Image, Reveal, Container, Card } from 'semantic-ui-react'
+import { Segment, Grid, Image, Container, Card } from 'semantic-ui-react'
 import _ from 'lodash'
 
 import PORTFOLIO_CONTENTS from '../contents/PortfolioContents'
