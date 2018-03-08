@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, Container, Responsive, Icon, Sidebar } from 'semantic-ui-react'
+import { Menu, Container, Responsive, Icon, Sidebar, Image } from 'semantic-ui-react'
+import nsLogo from '../statics/image/ns_logo.svg'
 
 export default class Nav extends Component {
     constructor(props) {
@@ -22,7 +23,7 @@ export default class Nav extends Component {
             <Container>
                 <Responsive {...Responsive.onlyComputer}>
                     <Menu size="large" secondary borderless fixed="top">
-                        <Menu.Item><Link to="/">HOME</Link></Menu.Item>
+                        <Menu.Item><Link to="/"><Image src={nsLogo} size="tiny" centered /></Link></Menu.Item>
                         <Menu.Menu position="right" >
                             <Menu.Item><Link to="/about">ABOUT</Link></Menu.Item>
                             <Menu.Item><Link to="/portfolio">PORTFOLIO</Link></Menu.Item>

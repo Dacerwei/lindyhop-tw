@@ -6,7 +6,9 @@ export default class Footer extends Component {
     render() {
         return (
             <Segment.Group>
-                <Segment textAlign="center">Naughty Swing</Segment>
+                <Segment textAlign="center">
+                    <Link to="/">Naughty Swing</Link>
+                </Segment>
                 <Segment>
                     <Grid centered textAlign="center">
                         <Grid.Column textAlign='center' mobile={16} tablet={2} computer={2}>
