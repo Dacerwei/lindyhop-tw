@@ -7,22 +7,37 @@ export default class Footer extends Component {
         return (
             <Segment.Group>
                 <Segment textAlign="center">Naughty Swing</Segment>
-                <Segment.Group horizontal>
-                    <Segment textAlign='center'><Link to="/about">ABOUT US</Link></Segment>
-                    <Segment textAlign='center'><Link to="/portfolio">PORTFOLIO</Link></Segment>
-                    <Segment textAlign='center'><Link to="/class">CO-OP</Link></Segment>
-                    <Segment textAlign='center'><Link to="/coop">CLASSES</Link></Segment>
-                    <Segment textAlign='center'><Link to="/events">EVENTS</Link></Segment>
-                </Segment.Group>
                 <Segment>
-                    <Grid centered columns={3}>
-                        <Grid.Column textAlign='center' width={1}>
+                    <Grid centered textAlign="center">
+                        <Grid.Column textAlign='center' mobile={16} tablet={2} computer={2}>
+                            <Link to="/">HOME</Link>
+                        </Grid.Column>
+                        <Grid.Column textAlign='center' mobile={16} tablet={2} computer={2}>
+                            <Link to="/about">ABOUT US</Link>
+                        </Grid.Column>
+                        <Grid.Column textAlign='center' mobile={16} tablet={2} computer={2}>
+                            <Link to="/portfolio">PORTFOLIO</Link>
+                        </Grid.Column>
+                        <Grid.Column textAlign='center' mobile={16} tablet={2} computer={2}>
+                            <Link to="/class">CO-OP</Link>
+                        </Grid.Column>
+                        <Grid.Column textAlign='center' mobile={16} tablet={2} computer={2}>
+                            <Link to="/coop">CLASSES</Link>
+                        </Grid.Column>
+                        <Grid.Column textAlign='center' mobile={16} tablet={2} computer={2}>
+                            <Link to="/events">EVENTS</Link>
+                        </Grid.Column>
+                    </Grid>
+                </Segment>
+                <Segment>
+                    <Grid centered>
+                        <Grid.Column textAlign='center' mobile={2} tablet={2} computer={2}>
                             <Icon name='facebook official' size='big' />
                         </Grid.Column>
-                        <Grid.Column textAlign='center' width={1}>
+                        <Grid.Column textAlign='center' mobile={2} tablet={2} computer={2}>
                             <Icon name='youtube play' size='big' />
                         </Grid.Column>
-                        <Grid.Column textAlign='center' width={1}>
+                        <Grid.Column textAlign='center' mobile={2} tablet={2} computer={2}>
                             <Icon name='instagram' size='big' />
                         </Grid.Column>
                     </Grid>
