@@ -14,7 +14,7 @@ export default class Footer extends Component {
                     <Segment textAlign='center'><Link to="/coop">CLASSES</Link></Segment>
                     <Segment textAlign='center'><Link to="/events">EVENTS</Link></Segment>
                 </Segment.Group>
-                <Segment horizontal>
+                <Segment>
                     <Grid centered columns={3}>
                         <Grid.Column textAlign='center' width={1}>
                             <Icon name='facebook official' size='big' />
