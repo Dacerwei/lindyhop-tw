@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Segment, Grid, Image, Container, Card, Modal, Header } from 'semantic-ui-react'
+import { Segment, Grid, Image, Container, Card, Modal, Header, Embed } from 'semantic-ui-react'
 import _ from 'lodash'
 
 import PORTFOLIO_CONTENTS from '../contents/PortfolioContents'
@@ -79,8 +79,14 @@ export default class Home extends Component {
                                                     dimmer={'blurring'}>
                                                     <Modal.Content>
                                                         <Modal.Description>
-                                                            <p>We've found the following gravatar image associated with your e-mail address.</p>
-                                                            <p>Is it okay to use this photo?</p>
+                                                            <Header>{content.title}</Header>
+                                                            <Embed
+                                                                id={content.youtubeVideoID}
+                                                                placeholder={content.src}
+                                                                source='youtube'
+                                                            />
+                                                            <p>{content.chineseDescription}</p>
+                                                            <p>{content.englishDescription}</p>
                                                         </Modal.Description>
                                                     </Modal.Content>
                                                 </Modal>
