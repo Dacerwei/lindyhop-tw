@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Segment, Grid, Image, Container, Card, Modal, Header, Embed } from 'semantic-ui-react'
+import { Segment, Grid, Image, Container, Card, Modal, Header, Embed, Button } from 'semantic-ui-react'
 import _ from 'lodash'
 
 import PORTFOLIO_CONTENTS from '../contents/PortfolioContents'
@@ -24,14 +24,28 @@ export default class Home extends Component {
         return (
             <div>
                 <Segment vertical style={{
-                    height: '600px',
+                    height: '100vh',
                     width: '100%',
                     backgroundImage: `url(${mainImage})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                 }}>
                     <Container style={{ color: 'white' }}>
-                        We're Naughty, so we Swing
+                        <Header
+                            as='h1'
+                            inverted
+                            style={{
+                                fontSize: '6em',
+                                fontWeight: 'normal',
+                                marginBottom: 0,
+                                marginTop: '2.5em',
+                                textAlign: 'center',
+                                textShadow: '0 0 20px rgba(0, 0, 0, 0.8)'
+
+                            }}
+                        >
+                            We're <strong style={{ color: 'orange' }}>Naughty</strong> <br />So We <strong style={{ color: 'orange' }}>Swing</strong>
+                        </Header>
                     </Container>
                 </Segment>
                 <Segment vertical>
