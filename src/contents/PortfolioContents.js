@@ -76,27 +76,27 @@ const PORTFOLIO_CONTENT = [
         aspectRatio: 1.5,
         youtubeVideoID: "i8J_j5eGlbo"
     },
-    // {
-    // 	ID: 7,
-    // 	src:'https://firebasestorage.googleapis.com/v0/b/naughty-swing-official-website.appspot.com/o/portfolio%2Fportfolio_07_fisrtdanceinwedding_mini.jpg?alt=media&token=194a9eae-65b4-4b94-a663-574a66f985a8',
-    // 	width: 1272,
-    // 	height: 715,
-    // 	title: 'First Dance of Wedding',
-    // 	chineseDescription: "",
-    // 	englishDescription: "",
-    // 	aspectRatio: 1.778,
-    // 	youtubeVideoID: null
-    // },
-    // {
-    // 	ID: 8,
-    // 	src:'https://firebasestorage.googleapis.com/v0/b/naughty-swing-official-website.appspot.com/o/portfolio%2Fportfolio_08_goldenhourse_mini.jpg?alt=media&token=9012b84f-2d6a-49ff-bc01-9d1ec29071f1',
-    // 	width: 1408,
-    // 	height: 939,
-    // 	title: '金馬奇幻影展',
-    // 	englishDescription: "Lobbying is about foresight. About anticipating your opponent's moves and devising counter measures. The winner plots one step ahead of the opposition. And plays her trump card just after they play theirs. It's about making sure you surprise them. And they don't surprise you.",
-    // 	aspectRatio: 1.499,
-    // 	youtubeVideoID: null
-    // },
+    {
+        ID: 7,
+        src: 'https://firebasestorage.googleapis.com/v0/b/naughty-swing-official-website.appspot.com/o/portfolio%2Fportfolio_07_fisrtdanceinwedding_mini.jpg?alt=media&token=194a9eae-65b4-4b94-a663-574a66f985a8',
+        width: 1272,
+        height: 715,
+        title: 'First Dance of Wedding',
+        chineseDescription: "",
+        englishDescription: "",
+        aspectRatio: 1.778,
+        youtubeVideoID: null
+    },
+    {
+        ID: 8,
+        src: 'https://firebasestorage.googleapis.com/v0/b/naughty-swing-official-website.appspot.com/o/portfolio%2Fportfolio_08_goldenhourse_mini.jpg?alt=media&token=9012b84f-2d6a-49ff-bc01-9d1ec29071f1',
+        width: 1408,
+        height: 939,
+        title: '金馬奇幻影展',
+        englishDescription: "Lobbying is about foresight. About anticipating your opponent's moves and devising counter measures. The winner plots one step ahead of the opposition. And plays her trump card just after they play theirs. It's about making sure you surprise them. And they don't surprise you.",
+        aspectRatio: 1.499,
+        youtubeVideoID: null
+    },
     {
         ID: 9,
         src: 'https://firebasestorage.googleapis.com/v0/b/naughty-swing-official-website.appspot.com/o/portfolio%2Fportfolio_09_wtp_mini.jpg?alt=media&token=d08fa06a-d297-4cb6-857b-11a8f56414ed',

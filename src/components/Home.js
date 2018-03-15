@@ -5,6 +5,7 @@ import _ from 'lodash'
 import PORTFOLIO_CONTENTS from '../contents/PortfolioContents'
 import COOP_CONTENTS from '../contents/CoopContents'
 import BRANDS_CONTENTS from '../contents/BrandContents'
+import CLASS_CONTENTS from '../contents/ClassContents'
 
 import videoProductionIcon from '../statics/image/icon_video_production.svg'
 import performanceIcon from '../statics/image/icon_performance.svg'
@@ -65,7 +66,7 @@ export default class Home extends Component {
                         {
                             _.map([0, 1, 2], (column) => {
                                 return (
-                                    <Grid.Column key={`portfolioColumn-${column}`} mobile={16} tablet={8} computer={5} textAlign='center'>
+                                    <Grid.Column key={`portfolioColumn-${column}`} mobile={16} tablet={5} computer={5} textAlign='center'>
                                         {
                                             _.map(_.filter(PORTFOLIO_CONTENTS, (content, index) => (index % 3 === column)), (content) => (
                                                 <Modal
@@ -79,12 +80,15 @@ export default class Home extends Component {
                                                     dimmer={'blurring'}>
                                                     <Modal.Content>
                                                         <Modal.Description>
-                                                            <Header>{content.title}</Header>
-                                                            <Embed
-                                                                id={content.youtubeVideoID}
-                                                                placeholder={content.src}
-                                                                source='youtube'
-                                                            />
+                                                            <Header as='h2'>{content.title}</Header>
+                                                            {
+                                                                content.youtubeVideoID &&
+                                                                <Embed
+                                                                    id={content.youtubeVideoID}
+                                                                    placeholder={content.src}
+                                                                    source='youtube'
+                                                                />
+                                                            }
                                                             <p>{content.chineseDescription}</p>
                                                             <p>{content.englishDescription}</p>
                                                         </Modal.Description>
@@ -99,7 +103,40 @@ export default class Home extends Component {
                     </Grid>
                 </Segment>
                 <Segment vertical>
-                    <Header as='h1' textAlign="center">classes banner</Header>
+                    <Header as='h1' textAlign="center">Classes | 課程</Header>
+                    <Header sub textAlign="center">Dance with Naughty Swing!!</Header>
+                    <Grid centered>
+                        {
+                            _.map(['lindyhop', 'charleston', 'solojazz'], (style) => {
+                                return (
+                                    <Grid.Column key={`class-style-${style}`} mobile={16} tablet={5} computer={5}>
+                                        {
+                                            _.map(_.filter(CLASS_CONTENTS, { 'style': style }), (theClass) => {
+                                                return (
+                                                    <Card key={`class-id-${theClass.id}`} centered>
+                                                        <Card.Content>
+                                                            <Card.Header>
+                                                                {theClass.titleEn} <br /> {theClass.titleTw}
+                                                            </Card.Header>
+                                                            <Card.Meta>
+                                                                {theClass.levelName}
+                                                            </Card.Meta>
+                                                            <Card.Description>
+                                                                {theClass.description}
+                                                            </Card.Description>
+                                                        </Card.Content>
+                                                        <Card.Content extra>
+                                                            {theClass.state}
+                                                        </Card.Content>
+                                                    </Card>
+                                                )
+                                            })
+                                        }
+                                    </Grid.Column>
+                                )
+                            })
+                        }
+                    </Grid>
                 </Segment>
                 <Segment vertical>
                     <Grid doubling columns={5} textAlign='center'>
