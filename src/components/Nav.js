@@ -8,21 +8,37 @@ export default class Nav extends Component {
         super(props);
 
         this.state = {
-            showSidebar: false
+            showSidebar: false,
+            active: false
         };
 
         this.sidebarClicked = this.sidebarClicked.bind(this);
+        this.handleScroll = this.handleScroll.bind(this);
     }
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll);
+    }
+
+    handleScroll(e) {
+        if (window.scrollY >= window.innerHeight) {
+            this.setState({ active: true });
+        } else {
+            this.setState({ active: false });
+        }
+    }
+
     sidebarClicked() {
         const { showSidebar } = this.state;
         this.setState({ showSidebar: !showSidebar });
     }
+
     render() {
-        const { showSidebar } = this.state;
+        const { showSidebar, active } = this.state;
         return (
             <Container>
                 <Responsive {...Responsive.onlyComputer}>
-                    <Menu size="large" secondary borderless fixed="top">
+                    <Menu size="large" secondary={!active} style={{ background: (!active) ? "" : "black" }} borderless fixed="top">
                         <Menu.Item><Link to="/"><Image src={nsLogo} size="tiny" centered /></Link></Menu.Item>
                         <Menu.Menu position="right" >
                             <Menu.Item><Link to="/about">ABOUT</Link></Menu.Item>
@@ -34,8 +50,8 @@ export default class Nav extends Component {
                     </Menu>
                 </Responsive>
                 <Responsive {...Responsive.onlyTablet}>
-                    <Menu size="large" secondary borderless fixed="top">
-                        <Menu.Item><Link to="/">HOME</Link></Menu.Item>
+                    <Menu size="large" secondary={!active} style={{ background: (!active) ? "" : "black" }} borderless fixed="top">
+                        <Menu.Item><Link to="/"><Image src={nsLogo} size="tiny" centered /></Link></Menu.Item>
                         <Menu.Menu position="right" >
                             <Menu.Item><Link to="/about">ABOUT</Link></Menu.Item>
                             <Menu.Item><Link to="/portfolio">PORTFOLIO</Link></Menu.Item>
@@ -46,9 +62,9 @@ export default class Nav extends Component {
                     </Menu>
                 </Responsive>
                 <Responsive {...Responsive.onlyMobile}>
-                    <Menu size="large" fixed="top">
-                        <Menu.Item header><Link to="/">Naughty Swing</Link></Menu.Item>
-                        <Menu.Item position="right" onClick={this.sidebarClicked}><Icon name='sidebar' size='big' /></Menu.Item>
+                    <Menu size="large" fixed="top" secondary={!active} style={{ background: (!active) ? "" : "black" }}>
+                        <Menu.Item header><Link to="/"><Image src={nsLogo} size="tiny" centered /></Link></Menu.Item>
+                        <Menu.Item position="right" onClick={this.sidebarClicked}><Icon name='sidebar' size='big' color="orange" /></Menu.Item>
                     </Menu>
                     <Sidebar
                         as={Menu}

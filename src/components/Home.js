@@ -139,8 +139,10 @@ export default class Home extends Component {
                                                                 {theClass.description}
                                                             </Card.Description>
                                                         </Card.Content>
-                                                        <Card.Content extra>
-                                                            {theClass.state}
+                                                        <Card.Content extra textAlign="center">
+                                                            {
+                                                                theClass.state && <Button primary>Sign Up</Button>
+                                                            }
                                                         </Card.Content>
                                                     </Card>
                                                 )

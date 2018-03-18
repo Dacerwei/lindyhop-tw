@@ -1,53 +1,44 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-import Home from '../components/Home'
-import About from '../components/About'
-import Nav from '../components/Nav'
-import Footer from '../components/Footer'
+import Layout from '../containers/Layout'
+import HomePage from '../containers/HomePage'
+import AboutPage from '../containers/AboutPage'
+import PortfolioPage from '../containers/PortfolioPage'
+import ClassPage from '../containers/ClassPage'
+import CoopPage from '../containers/CoopPage'
+import EventsPage from '../containers/EventsPage'
 
 const Routes = () => (
     <Switch>
         <Route exact path="/" component={() => (
-            <div>
-                <Nav />
-                <Home />
-                <Footer />
-            </div>
+            <Layout>
+                <HomePage />
+            </Layout>
         )} />
         <Route path="/about" component={() => (
-            <div>
-                <Nav />
-                <About />
-                <Footer />
-            </div>
+            <Layout>
+                <AboutPage />
+            </Layout>
         )} />
         <Route path="/portfolio" component={() => (
-            <div>
-                <Nav />
-                <h1>portfolio page</h1>
-                <Footer />
-            </div>
+            <Layout>
+                <PortfolioPage />
+            </Layout>
         )} />
         <Route path="/class" component={() => (
-            <div>
-                <Nav />
-                <h1>class page</h1>
-                <Footer />
-            </div>
+            <Layout>
+                <ClassPage />
+            </Layout>
         )} />
         <Route path="/coop" component={() => (
-            <div>
-                <Nav />
-                <h1>coop page</h1>
-                <Footer />
-            </div>
+            <Layout>
+                <CoopPage />
+            </Layout>
         )} />
         <Route path="/events" component={() => (
-            <div>
-                <Nav />
-                <h1>events page</h1>
-                <Footer />
-            </div>
+            <Layout>
+                <EventsPage />
+            </Layout>
         )} />
     </Switch>
 )
