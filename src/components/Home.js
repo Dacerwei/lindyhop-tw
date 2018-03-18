@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
-import { Segment, Grid, Image, Container, Card, Modal, Header, Embed, Button } from 'semantic-ui-react'
+import { Segment, Grid, Image, Container, Card, Header, Button } from 'semantic-ui-react'
 import _ from 'lodash'
+
+import PortfolioSection from '../components/PortfolioSection'
 
 import PORTFOLIO_CONTENTS from '../contents/PortfolioContents'
 import COOP_CONTENTS from '../contents/CoopContents'
@@ -76,45 +78,7 @@ export default class Home extends Component {
                 </Segment>
                 <Segment vertical>
                     <Header as='h1' textAlign="center">Portfolio | 作品集</Header>
-                    <Grid textAlign='center'>
-                        {
-                            _.map([0, 1, 2], (column) => {
-                                return (
-                                    <Grid.Column key={`portfolioColumn-${column}`} mobile={16} tablet={5} computer={5} textAlign='center'>
-                                        {
-                                            _.map(_.filter(PORTFOLIO_CONTENTS, (content, index) => (index % 3 === column)), (content) => (
-                                                <Modal
-                                                    key={content.ID}
-                                                    trigger={
-                                                        <Container>
-                                                            <Image src={content.src} size='huge' />
-                                                            <p>{content.title}</p>
-                                                        </Container>
-                                                    }
-                                                    dimmer={'blurring'}>
-                                                    <Modal.Content>
-                                                        <Modal.Description>
-                                                            <Header as='h2'>{content.title}</Header>
-                                                            {
-                                                                content.youtubeVideoID &&
-                                                                <Embed
-                                                                    id={content.youtubeVideoID}
-                                                                    placeholder={content.src}
-                                                                    source='youtube'
-                                                                />
-                                                            }
-                                                            <p>{content.chineseDescription}</p>
-                                                            <p>{content.englishDescription}</p>
-                                                        </Modal.Description>
-                                                    </Modal.Content>
-                                                </Modal>
-                                            ))
-                                        }
-                                    </Grid.Column>
-                                )
-                            })
-                        }
-                    </Grid>
+                    <PortfolioSection src={_.take(PORTFOLIO_CONTENTS, 6)} columns={3} />
                 </Segment>
                 <Segment vertical>
                     <Header as='h1' textAlign="center">Classes | 課程</Header>
