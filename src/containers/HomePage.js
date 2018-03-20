@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Segment, Grid, Image, Container, Card, Header, Button, Item } from 'semantic-ui-react'
+import { Segment, Grid, Container, Card, Header, Button, Item } from 'semantic-ui-react'
 import _ from 'lodash'
 
 import PortfolioSection from '../components/PortfolioSection'
@@ -90,8 +90,7 @@ export default class HomePage extends Component {
                     <PortfolioSection src={_.take(PORTFOLIO_CONTENTS, 6)} columns={3} />
                 </Segment>
                 <Segment vertical>
-                    <Header as='h1' textAlign="center">Classes | 課程</Header>
-                    <Header sub textAlign="center">Dance with Naughty Swing!!</Header>
+                    <Header as='h1' textAlign="center">Swing Classes | 搖擺舞課程</Header>
                     <Grid centered>
                         {
                             _.map(['lindyhop', 'charleston', 'solojazz'], (style) => {

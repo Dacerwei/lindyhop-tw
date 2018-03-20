@@ -21,10 +21,10 @@ export default class Footer extends Component {
                             <Link to="/portfolio">PORTFOLIO</Link>
                         </Grid.Column>
                         <Grid.Column textAlign='center' mobile={16} tablet={2} computer={2}>
-                            <Link to="/class">CO-OP</Link>
+                            <Link to="/class">CLASSES</Link>
                         </Grid.Column>
                         <Grid.Column textAlign='center' mobile={16} tablet={2} computer={2}>
-                            <Link to="/coop">CLASSES</Link>
+                            <Link to="/coop">CO-OP</Link>
                         </Grid.Column>
                         <Grid.Column textAlign='center' mobile={16} tablet={2} computer={2}>
                             <Link to="/events">EVENTS</Link>
@@ -46,7 +46,7 @@ export default class Footer extends Component {
                 </Segment>
                 <Segment textAlign='center'>
                     <p>Contact Us : naughtyswingtw@gmail.com</p>
-                    <p>Copyright © 2015 Naughty Swing. All rights reserved.</p>
+                    <p>Copyright © 2018 Naughty Swing. All rights reserved.</p>
                     <p>SITE BY CHINWEI HSU</p>
                 </Segment>
             </Segment.Group>
