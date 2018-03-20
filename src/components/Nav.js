@@ -43,7 +43,7 @@ export default class Nav extends Component {
                         <Menu.Menu position="right" >
                             <Menu.Item><Link to="/about">ABOUT</Link></Menu.Item>
                             <Menu.Item><Link to="/portfolio">PORTFOLIO</Link></Menu.Item>
-                            <Menu.Item><Link to="/class">CLASS</Link></Menu.Item>
+                            <Menu.Item><Link to="/class">CLASSES</Link></Menu.Item>
                             <Menu.Item><Link to="/coop">COOP</Link></Menu.Item>
                             <Menu.Item><Link to="/events">EVENTS</Link></Menu.Item>
                         </Menu.Menu>
@@ -55,7 +55,7 @@ export default class Nav extends Component {
                         <Menu.Menu position="right" >
                             <Menu.Item><Link to="/about">ABOUT</Link></Menu.Item>
                             <Menu.Item><Link to="/portfolio">PORTFOLIO</Link></Menu.Item>
-                            <Menu.Item><Link to="/class">CLASS</Link></Menu.Item>
+                            <Menu.Item><Link to="/class">CLASSES</Link></Menu.Item>
                             <Menu.Item><Link to="/coop">COOP</Link></Menu.Item>
                             <Menu.Item><Link to="/events">EVENTS</Link></Menu.Item>
                         </Menu.Menu>
@@ -90,7 +90,7 @@ export default class Nav extends Component {
                         </Menu.Item>
                         <Menu.Item>
                             <Icon name="student" size='huge' />
-                            <Link to="/class">CLASS</Link>
+                            <Link to="/class">CLASSES</Link>
                         </Menu.Item>
                         <Menu.Item>
                             <Icon name="group" size='huge' />
