@@ -1,13 +1,36 @@
 import React from 'react'
-import { Container, Header, Divider, Tab } from 'semantic-ui-react'
+import { Container, Header, Divider, Tab, List } from 'semantic-ui-react'
+import _ from 'lodash'
+
 import BrandSection from '../components/BrandSection'
 import BRANDS_CONTENTS from '../contents/BrandContents'
+import EXPERIENCE_CONTENTS from '../contents/ExperienceContents'
 
-const panes = [
-    { menuItem: '2017', render: () => <Tab.Pane attached={false}>2017 Content</Tab.Pane> },
-    { menuItem: '2016', render: () => <Tab.Pane attached={false}>2016 Content</Tab.Pane> },
-    { menuItem: '2015', render: () => <Tab.Pane attached={false}>2015 Content</Tab.Pane> },
-];
+const panes = _.map(['2017', '2016', '2015'], (year) => {
+    return {
+        menuItem: year,
+        render: () => {
+            return (
+                <Tab.Pane attached={false}>
+                    <List>
+                        {
+                            _.map(_.filter(EXPERIENCE_CONTENTS, { year: year }), (exp) => {
+                                return (
+                                    <List.Item key={`exp-${year}-${exp.id}`}>
+                                        <List.Content>
+                                            <List.Description>{exp.month}</List.Description>
+                                            <List.Header>{exp.title}</List.Header>
+                                        </List.Content>
+                                    </List.Item>
+                                )
+                            })
+                        }
+                    </List>
+                </Tab.Pane>
+            )
+        }
+    };
+});
 
 const AboutPage = (props) => {
     return (
