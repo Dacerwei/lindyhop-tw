@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Grid, Image, Container, Modal, Header, Embed } from 'semantic-ui-react'
+import { Grid, Image, Segment, Container, Modal, Header, Embed } from 'semantic-ui-react'
 
 import _ from 'lodash'
 
@@ -24,7 +24,8 @@ export default class PorfolioSection extends Component {
                                                     <p>{content.title}</p>
                                                 </Container>
                                             }
-                                            dimmer={'blurring'}>
+                                            dimmer={'blurring'}
+                                            className="scrolling">
                                             <Modal.Content>
                                                 <Modal.Description>
                                                     <Header as='h2'>{content.title}</Header>
