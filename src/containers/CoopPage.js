@@ -21,8 +21,8 @@ const CoopPage = (props) => {
                                     <Item.Content>
                                         <Item.Header as="h1">{content.title}</Item.Header>
                                         <Item.Description>
-                                            <p>{content.contentChinese}</p>
-                                            <p>{content.contentEnglish}</p>
+                                            <p>{content.content.tw}</p>
+                                            <p>{content.content.en}</p>
                                         </Item.Description>
                                     </Item.Content>
                                 </Item>

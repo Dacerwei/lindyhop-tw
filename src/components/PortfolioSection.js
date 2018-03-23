@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Grid, Image, Segment, Container, Modal, Header, Embed } from 'semantic-ui-react'
+import { Grid, Image, Container, Modal, Header, Embed } from 'semantic-ui-react'
 
 import _ from 'lodash'
 
