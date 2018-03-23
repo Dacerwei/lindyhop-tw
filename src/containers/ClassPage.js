@@ -6,7 +6,7 @@ import CLASS_CONTENTS, { LEVEL_DEFINITIONS } from '../contents/ClassContents'
 
 const ClassPage = (props) => {
     return (
-        <div>
+        <div className="page-wrapper">
             <Container as="section">
                 <Item.Group divided>
                     {

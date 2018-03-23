@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, Container, Responsive, Icon, Sidebar, Image } from 'semantic-ui-react'
 import nsLogo from '../statics/image/ns_logo.svg'
+import PropTypes from 'prop-types'
 
 export default class Nav extends Component {
     constructor(props) {
@@ -21,7 +22,11 @@ export default class Nav extends Component {
     }
 
     handleScroll(e) {
-        if (window.scrollY >= window.innerHeight) {
+        const { homePage } = this.props;
+        const activeHeight = (homePage) ? window.innerHeight : 80;
+
+        if (homePage) { }
+        if (window.scrollY >= activeHeight) {
             this.setState({ active: true });
         } else {
             this.setState({ active: false });
@@ -110,3 +115,11 @@ export default class Nav extends Component {
         )
     }
 }
+
+Nav.protoTypes = {
+    homePage: PropTypes.boolean,
+};
+
+Nav.defaultProps = {
+    homePage: false
+};

@@ -4,7 +4,7 @@ import PORTFOLIO_CONTENTS from '../contents/PortfolioContents'
 
 const PortfolioPage = (props) => {
     return (
-        <div>
+        <div className="page-wrapper">
             <PortfolioSection src={PORTFOLIO_CONTENTS} columns={3} />
         </div>
     )

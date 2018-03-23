@@ -6,7 +6,7 @@ import COOP_CONTENTS from '../contents/CoopContents'
 
 const CoopPage = (props) => {
     return (
-        <div>
+        <div className="page-wrapper">
             <Container as="section">
                 <p>Naughty Swing 搖擺舞團專攻搖擺舞蹈編排、舞蹈教學、影片拍攝、舞蹈演出等！如果你也熱愛爵士樂，並且深深被 Swing Dance 搖擺舞的歡樂所吸引，就快來看看可以怎麼與我們合作吧！</p>
                 <p>More than just a dance crew - Naughty Swing specializes in Swing Dance choreography, teaching and performance as well as video filming and editing. If you're amazed by the beauty of Swing Dance, why not pick some options below and work with us now!</p>

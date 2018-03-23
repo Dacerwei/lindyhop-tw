@@ -11,7 +11,7 @@ import EventsPage from '../containers/EventsPage'
 const Routes = () => (
     <Switch>
         <Route exact path="/" component={() => (
-            <Layout>
+            <Layout homePage={true}>
                 <HomePage />
             </Layout>
         )} />

@@ -2,7 +2,7 @@ import React from 'react'
 
 const EventsPage = (props) => {
     return (
-        <div>
+        <div className="page-wrapper">
             EventsPage
         </div>
     )
