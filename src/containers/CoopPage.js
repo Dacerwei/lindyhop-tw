@@ -17,7 +17,7 @@ const CoopPage = (props) => {
                         _.map(COOP_CONTENTS, (content) => {
                             return (
                                 <Item key={`coop-page-content-${content.id}`}>
-                                    <Item.Image size='large' src={content.mediaSrc} />
+                                    <Item.Image size='large' src={content.mediaSrc} rounded />
                                     <Item.Content>
                                         <Item.Header as="h1">{content.title}</Item.Header>
                                         <Item.Description>

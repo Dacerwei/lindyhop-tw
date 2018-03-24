@@ -8,6 +8,7 @@ const ClassPage = (props) => {
     return (
         <div className="page-wrapper">
             <Container as="section">
+                <Header as='h1' textAlign="center">Levels | 課程分級</Header>
                 <Item.Group divided>
                     {
                         _.map(LEVEL_DEFINITIONS, (level) => {
@@ -29,7 +30,7 @@ const ClassPage = (props) => {
                     }
                 </Item.Group>
             </Container>
-            <Container>
+            <Container as="section">
                 <Header as='h1' textAlign="center">Classes | 課程總覽</Header>
                 <Grid centered>
                     {
