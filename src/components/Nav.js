@@ -4,6 +4,10 @@ import { Menu, Container, Responsive, Icon, Sidebar, Image } from 'semantic-ui-r
 import nsLogo from '../statics/image/ns_logo.svg'
 import PropTypes from 'prop-types'
 
+const navItemStyle = {
+    color: 'orange',
+};
+
 export default class Nav extends Component {
     constructor(props) {
         super(props);
@@ -46,11 +50,11 @@ export default class Nav extends Component {
                     <Menu size="large" secondary={!active} style={{ background: (!active) ? "" : "black" }} borderless fixed="top">
                         <Menu.Item><Link to="/"><Image src={nsLogo} size="tiny" centered /></Link></Menu.Item>
                         <Menu.Menu position="right" >
-                            <Menu.Item><Link to="/about">ABOUT</Link></Menu.Item>
-                            <Menu.Item><Link to="/portfolio">PORTFOLIO</Link></Menu.Item>
-                            <Menu.Item><Link to="/class">CLASSES</Link></Menu.Item>
-                            <Menu.Item><Link to="/coop">COOP</Link></Menu.Item>
-                            <Menu.Item><Link to="/events">EVENTS</Link></Menu.Item>
+                            <Menu.Item><Link to="/about" style={navItemStyle}>ABOUT</Link></Menu.Item>
+                            <Menu.Item><Link to="/portfolio" style={navItemStyle}>PORTFOLIO</Link></Menu.Item>
+                            <Menu.Item><Link to="/class" style={navItemStyle}>CLASSES</Link></Menu.Item>
+                            <Menu.Item><Link to="/coop" style={navItemStyle}>COOP</Link></Menu.Item>
+                            <Menu.Item><Link to="/events" style={navItemStyle}>EVENTS</Link></Menu.Item>
                         </Menu.Menu>
                     </Menu>
                 </Responsive>
@@ -58,11 +62,11 @@ export default class Nav extends Component {
                     <Menu size="large" secondary={!active} style={{ background: (!active) ? "" : "black" }} borderless fixed="top">
                         <Menu.Item><Link to="/"><Image src={nsLogo} size="tiny" centered /></Link></Menu.Item>
                         <Menu.Menu position="right" >
-                            <Menu.Item><Link to="/about">ABOUT</Link></Menu.Item>
-                            <Menu.Item><Link to="/portfolio">PORTFOLIO</Link></Menu.Item>
-                            <Menu.Item><Link to="/class">CLASSES</Link></Menu.Item>
-                            <Menu.Item><Link to="/coop">COOP</Link></Menu.Item>
-                            <Menu.Item><Link to="/events">EVENTS</Link></Menu.Item>
+                            <Menu.Item><Link to="/about" style={navItemStyle}>ABOUT</Link></Menu.Item>
+                            <Menu.Item><Link to="/portfolio" style={navItemStyle}>PORTFOLIO</Link></Menu.Item>
+                            <Menu.Item><Link to="/class" style={navItemStyle}>CLASSES</Link></Menu.Item>
+                            <Menu.Item><Link to="/coop" style={navItemStyle}>COOP</Link></Menu.Item>
+                            <Menu.Item><Link to="/events" style={navItemStyle}>EVENTS</Link></Menu.Item>
                         </Menu.Menu>
                     </Menu>
                 </Responsive>
@@ -83,30 +87,30 @@ export default class Nav extends Component {
                     >
                         <Menu.Item>
                             <Icon name='home' size='big' />
-                            <Link to="/">Home</Link>
+                            <Link to="/" style={navItemStyle}>Home</Link>
                         </Menu.Item>
                         <Menu.Item>
                             <Icon name="address card outline" size='huge' />
-                            <Link to="/about">ABOUT</Link>
+                            <Link to="/about" style={navItemStyle}>ABOUT</Link>
                         </Menu.Item>
                         <Menu.Item>
                             <Icon name="grid layout" size='huge' />
-                            <Link to="/portfolio">PORTFOLIO</Link>
+                            <Link to="/portfolio" style={navItemStyle}>PORTFOLIO</Link>
                         </Menu.Item>
                         <Menu.Item>
                             <Icon name="student" size='huge' />
-                            <Link to="/class">CLASSES</Link>
+                            <Link to="/class" style={navItemStyle}>CLASSES</Link>
                         </Menu.Item>
                         <Menu.Item>
                             <Icon name="group" size='huge' />
-                            <Link to="/coop">COOP</Link>
+                            <Link to="/coop" style={navItemStyle}>COOP</Link>
                         </Menu.Item>
                         <Menu.Item>
                             <Icon name="calendar" size='huge' />
-                            <Link to="/events">EVENTS</Link>
+                            <Link to="/events" style={navItemStyle}>EVENTS</Link>
                         </Menu.Item>
                         <Menu.Item onClick={this.sidebarClicked}>
-                            <Icon name="arrow right" size='huge' />
+                            <Icon name="arrow right" size='huge' style={navItemStyle} />
                             CLOSE
                         </Menu.Item>
                     </Sidebar>

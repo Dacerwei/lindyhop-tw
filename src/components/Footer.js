@@ -2,32 +2,36 @@ import React, { Component } from 'react'
 import { Segment, Icon, Grid } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 
+const footerItemStyle = {
+    color: 'black',
+};
+
 export default class Footer extends Component {
     render() {
         return (
             <Segment.Group>
                 <Segment textAlign="center">
-                    <Link to="/">Naughty Swing</Link>
+                    <Link to="/" style={footerItemStyle}>Naughty Swing</Link>
                 </Segment>
                 <Segment>
                     <Grid centered textAlign="center">
                         <Grid.Column textAlign='center' mobile={16} tablet={2} computer={2}>
-                            <Link to="/">HOME</Link>
+                            <Link to="/" style={footerItemStyle}>HOME</Link>
                         </Grid.Column>
                         <Grid.Column textAlign='center' mobile={16} tablet={2} computer={2}>
-                            <Link to="/about">ABOUT US</Link>
+                            <Link to="/about" style={footerItemStyle}>ABOUT US</Link>
                         </Grid.Column>
                         <Grid.Column textAlign='center' mobile={16} tablet={2} computer={2}>
-                            <Link to="/portfolio">PORTFOLIO</Link>
+                            <Link to="/portfolio" style={footerItemStyle}>PORTFOLIO</Link>
                         </Grid.Column>
                         <Grid.Column textAlign='center' mobile={16} tablet={2} computer={2}>
-                            <Link to="/class">CLASSES</Link>
+                            <Link to="/class" style={footerItemStyle}>CLASSES</Link>
                         </Grid.Column>
                         <Grid.Column textAlign='center' mobile={16} tablet={2} computer={2}>
-                            <Link to="/coop">CO-OP</Link>
+                            <Link to="/coop" style={footerItemStyle}>CO-OP</Link>
                         </Grid.Column>
                         <Grid.Column textAlign='center' mobile={16} tablet={2} computer={2}>
-                            <Link to="/events">EVENTS</Link>
+                            <Link to="/events" style={footerItemStyle}>EVENTS</Link>
                         </Grid.Column>
                     </Grid>
                 </Segment>
