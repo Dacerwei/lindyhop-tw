@@ -51,21 +51,21 @@ export default class HomePage extends Component {
                         </Header>
                     </Container>
                 </Segment>
-                <Segment vertical>
+                <Segment vertical padded='very'>
                     <Container>
-                        <Header as='h1' textAlign="center">Introduction | 舞團介紹</Header>
-                        <p>Naughty Swing 搖擺舞團，於 2015 年成立，由6位平均舞齡 10 年、擁有不同街舞背景的舞者所組成。擅長將不同元素融合至 Swing Dance 當中，呈現有別於以往的演出，為目前台灣新生代指標性 Swing 舞團。2016 年發起 I Charleston Taipei 影片拍攝計畫，在 2 周內突破 50 萬人次點閱率，並獲得 10 多家媒體報導，包涵今日台灣、蘋果日報以及TVBS。</p>
-                        <p>Naughty Swing is founded in 2015 by 6 talented Taiwanese dancers, each with over 10 years of experience in street dance. As one of the most iconic dance crews in Taiwan, Naughty Swing is keen to integrate elements from different dance styles and to give unprecedented performances. "I Charleston Taipei" is their first official dance film project launched in 2016, reaching over 500,000 views on YouTube within 2 weeks, and was reported on by over 10 media, including Taiwan Today, Apple Daily and TVBS.</p>
+                        <h1 className="home-page-header">Introduction | 舞團介紹</h1>
+                        <p className="home-page-content">Naughty Swing 搖擺舞團，於 2015 年成立，由6位平均舞齡 10 年、擁有不同街舞背景的舞者所組成。擅長將不同元素融合至 Swing Dance 當中，呈現有別於以往的演出，為目前台灣新生代指標性 Swing 舞團。2016 年發起 I Charleston Taipei 影片拍攝計畫，在 2 周內突破 50 萬人次點閱率，並獲得 10 多家媒體報導，包涵今日台灣、蘋果日報以及TVBS。</p>
+                        <p className="home-page-content">Naughty Swing is founded in 2015 by 6 talented Taiwanese dancers, each with over 10 years of experience in street dance. As one of the most iconic dance crews in Taiwan, Naughty Swing is keen to integrate elements from different dance styles and to give unprecedented performances. "I Charleston Taipei" is their first official dance film project launched in 2016, reaching over 500,000 views on YouTube within 2 weeks, and was reported on by over 10 media, including Taiwan Today, Apple Daily and TVBS.</p>
                     </Container>
                 </Segment>
-                <Segment vertical>
+                <Segment vertical padded='very'>
                     <Container>
-                        <Header as='h1' textAlign="center">CO-OP | 合作項目</Header>
-                        <p>More than just a dance crew - Naughty Swing specializes in Swing Dance choreography, teaching and performance as well as video filming and editing. If you're amazed by the beauty of Swing Dance, why not pick some options below and work with us now!</p>
-                        <p>Naughty Swing 搖擺舞團專攻搖擺舞蹈編排、舞蹈教學、影片拍攝、舞蹈演出等！如果你也熱愛爵士樂，並且深深被 Swing Dance 搖擺舞的歡樂所吸引，就快來看看可以怎麼與我們合作吧！</p>
+                        <h1 className="home-page-header">CO-OP | 合作項目</h1>
+                        <p className="home-page-content">More than just a dance crew - Naughty Swing specializes in Swing Dance choreography, teaching and performance as well as video filming and editing. If you're amazed by the beauty of Swing Dance, why not pick some options below and work with us now!</p>
+                        <p className="home-page-content">Naughty Swing 搖擺舞團專攻搖擺舞蹈編排、舞蹈教學、影片拍攝、舞蹈演出等！如果你也熱愛爵士樂，並且深深被 Swing Dance 搖擺舞的歡樂所吸引，就快來看看可以怎麼與我們合作吧！</p>
                     </Container>
                     <Container>
-                        <Item.Group>
+                        <Item.Group relaxed>
                             {
                                 _.map(COOP_CONTENTS, (content) => {
                                     return (
@@ -85,12 +85,12 @@ export default class HomePage extends Component {
                         </Item.Group>
                     </Container>
                 </Segment>
-                <Segment vertical>
-                    <Header as='h1' textAlign="center">Portfolio | 作品集</Header>
+                <Segment vertical padded='very'>
+                    <h1 className="home-page-header">Portfolio | 作品集</h1>
                     <PortfolioSection src={_.take(PORTFOLIO_CONTENTS, 6)} columns={3} />
                 </Segment>
-                <Segment vertical>
-                    <Header as='h1' textAlign="center">Swing Classes | 搖擺舞課程</Header>
+                <Segment vertical padded='very'>
+                    <h1 className="home-page-header">Swing Classes | 搖擺舞課程</h1>
                     <Grid centered>
                         {
                             _.map(['lindyhop', 'charleston', 'solojazz'], (style) => {
@@ -126,7 +126,7 @@ export default class HomePage extends Component {
                         }
                     </Grid>
                 </Segment>
-                <Segment vertical>
+                <Segment vertical padded='very'>
                     <BrandSection src={BRANDS_CONTENTS} columns={5} />
                 </Segment>
             </div>
