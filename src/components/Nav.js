@@ -83,36 +83,14 @@ export default class Nav extends Component {
                         visible={showSidebar}
                         icon='labeled'
                         vertical
-                        inverted
-                    >
-                        <Menu.Item>
-                            <Icon name='home' size='big' />
-                            <Link to="/" style={navItemStyle}>Home</Link>
-                        </Menu.Item>
-                        <Menu.Item>
-                            <Icon name="address card outline" size='huge' />
-                            <Link to="/about" style={navItemStyle}>ABOUT</Link>
-                        </Menu.Item>
-                        <Menu.Item>
-                            <Icon name="grid layout" size='huge' />
-                            <Link to="/portfolio" style={navItemStyle}>PORTFOLIO</Link>
-                        </Menu.Item>
-                        <Menu.Item>
-                            <Icon name="student" size='huge' />
-                            <Link to="/class" style={navItemStyle}>CLASSES</Link>
-                        </Menu.Item>
-                        <Menu.Item>
-                            <Icon name="group" size='huge' />
-                            <Link to="/coop" style={navItemStyle}>COOP</Link>
-                        </Menu.Item>
-                        <Menu.Item>
-                            <Icon name="calendar" size='huge' />
-                            <Link to="/events" style={navItemStyle}>EVENTS</Link>
-                        </Menu.Item>
-                        <Menu.Item onClick={this.sidebarClicked}>
-                            <Icon name="arrow right" size='huge' style={navItemStyle} />
-                            CLOSE
-                        </Menu.Item>
+                        inverted>
+                        <Menu.Item><Icon name='home' size='big' /><Link to="/" style={navItemStyle}>Home</Link></Menu.Item>
+                        <Menu.Item><Icon name="address card outline" size='huge' /><Link to="/about" style={navItemStyle}>ABOUT</Link></Menu.Item>
+                        <Menu.Item><Icon name="grid layout" size='huge' /><Link to="/portfolio" style={navItemStyle}>PORTFOLIO</Link></Menu.Item>
+                        <Menu.Item><Icon name="student" size='huge' /><Link to="/class" style={navItemStyle}>CLASSES</Link></Menu.Item>
+                        <Menu.Item><Icon name="group" size='huge' /><Link to="/coop" style={navItemStyle}>COOP</Link></Menu.Item>
+                        <Menu.Item><Icon name="calendar" size='huge' /><Link to="/events" style={navItemStyle}>EVENTS</Link></Menu.Item>
+                        <Menu.Item onClick={this.sidebarClicked}><Icon name="arrow right" size='huge' style={navItemStyle} />CLOSE</Menu.Item>
                     </Sidebar>
                 </Responsive>
             </Container>

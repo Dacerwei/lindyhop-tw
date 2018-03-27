@@ -7,3 +7,16 @@ body {
 .page-wrapper {
     margin-top: 80px;
 }
+
+.footer-logo {
+    color: #FFFFFF;
+    font-size: 20pt;
+}
+
+.footer-item {
+    color: #FFFFFF;
+}
+
+.footer-social-icon {
+    color: #FFFFFF;
+}
