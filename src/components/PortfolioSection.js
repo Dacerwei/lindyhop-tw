@@ -4,6 +4,38 @@ import { Grid, Image, Container, Modal, Header, Embed } from 'semantic-ui-react'
 
 import _ from 'lodash'
 
+const PorfolioItem = (props) => {
+    const { portfolioContent } = props;
+    return (
+        <Modal
+            key={portfolioContent.ID}
+            trigger={
+                <Container className="portfolio-item">
+                    <Image className="portfolio-image" src={portfolioContent.src} size='huge' />
+                    <p className="portfolio-title">{portfolioContent.title}</p>
+                </Container>
+            }
+            dimmer={'blurring'}
+            className="scrolling">
+            <Modal.Content>
+                <Modal.Description>
+                    <Header as='h2'>{portfolioContent.title}</Header>
+                    {
+                        portfolioContent.youtubeVideoID &&
+                        <Embed
+                            id={portfolioContent.youtubeVideoID}
+                            placeholder={portfolioContent.src}
+                            source='youtube'
+                        />
+                    }
+                    <p>{portfolioContent.chineseDescription}</p>
+                    <p>{portfolioContent.englishDescription}</p>
+                </Modal.Description>
+            </Modal.Content>
+        </Modal>
+    );
+}
+
 export default class PorfolioSection extends Component {
 
     render() {
@@ -13,35 +45,10 @@ export default class PorfolioSection extends Component {
                 {
                     _.map(_.range(columns), (column) => {
                         return (
-                            <Grid.Column key={`portfolioColumn-${column}`} mobile={16} tablet={5} computer={5} textAlign='center'>
+                            <Grid.Column key={`portfolioColumn-${column}`} mobile={16} tablet={5} computer={5} textAlign='center' style={{ padding: 0 }}>
                                 {
                                     _.map(_.filter(src, (content, index) => (index % columns === column)), (content) => (
-                                        <Modal
-                                            key={content.ID}
-                                            trigger={
-                                                <Container>
-                                                    <Image src={content.src} size='huge' />
-                                                    <p>{content.title}</p>
-                                                </Container>
-                                            }
-                                            dimmer={'blurring'}
-                                            className="scrolling">
-                                            <Modal.Content>
-                                                <Modal.Description>
-                                                    <Header as='h2'>{content.title}</Header>
-                                                    {
-                                                        content.youtubeVideoID &&
-                                                        <Embed
-                                                            id={content.youtubeVideoID}
-                                                            placeholder={content.src}
-                                                            source='youtube'
-                                                        />
-                                                    }
-                                                    <p>{content.chineseDescription}</p>
-                                                    <p>{content.englishDescription}</p>
-                                                </Modal.Description>
-                                            </Modal.Content>
-                                        </Modal>
+                                        <PorfolioItem portfolioContent={content} key={content.ID} />
                                     ))
                                 }
                             </Grid.Column>
