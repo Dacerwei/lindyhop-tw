@@ -5,7 +5,11 @@ body {
 }
 
 .page-wrapper {
-    margin-top: 80px;
+    padding-top: 100px;
+}
+
+#portfolio-page {
+    background-color: black;
 }
 
 .footer-logo {
@@ -68,6 +72,10 @@ body {
     position: relative;
 }
 
+.portfolio-item:hover .portfolio-image {
+    filter: none;
+}
+
 .portfolio-title {
     position: absolute;
     top: 45%;
@@ -77,4 +85,6 @@ body {
     font-size: 120%;
 }
 
-.portfolio-image {}
+.portfolio-image {
+    filter: grayscale(100%);
+}
