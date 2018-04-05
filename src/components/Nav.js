@@ -25,6 +25,10 @@ export default class Nav extends Component {
         window.addEventListener('scroll', this.handleScroll);
     }
 
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+
     handleScroll(e) {
         const { homePage } = this.props;
         const activeHeight = (homePage) ? window.innerHeight : 80;
